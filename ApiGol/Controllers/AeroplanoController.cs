@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Api.Business;
-using Api.Models;
+using ApiGol.Business;
+using ApiGol.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Api.Controllers
+namespace ApiGol.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -42,12 +42,12 @@ namespace Api.Controllers
         public Resultado Post([FromBody] AirplaneModel value)
         {
             return _service.Incluir(value);
-             
+
         }
 
         // PUT: api/Aeroplano/5
         [HttpPut]
-        public Resultado Put( [FromBody] AirplaneModel value)
+        public Resultado Put([FromBody] AirplaneModel value)
         {
             return _service.Atualizar(value);
         }

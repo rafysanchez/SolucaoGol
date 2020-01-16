@@ -1,11 +1,11 @@
-﻿using Api.Data;
-using Api.Models;
+﻿using ApiGol.Data;
+using ApiGol.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Api.Business
+namespace ApiGol.Business
 {
     public class AirplaneService
     {
@@ -15,10 +15,10 @@ namespace Api.Business
             _context = context;
         }
 
-        public AirplaneModel Obter(int id =0)
+        public AirplaneModel Obter(int id = 0)
         {
-            
-            if (id>=0)
+
+            if (id >= 0)
             {
                 return _context.Airplanes.Where(
                     p => p.AirplaneId == id).FirstOrDefault();
@@ -112,7 +112,7 @@ namespace Api.Business
             }
             else
             {
-               
+
                 if (String.IsNullOrWhiteSpace(aeroplano.Modelo))
                 {
                     resultado.Inconsistencias.Add(
@@ -127,11 +127,6 @@ namespace Api.Business
 
             return resultado;
         }
-
-
-
-
-
 
     }
 }
