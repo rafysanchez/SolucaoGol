@@ -18,14 +18,15 @@ export class EmployeeListComponent implements OnInit {
   }
 
   populateForm(emp: Employee) {
+    
     this.service.formData = Object.assign({}, emp);
   }
 
   onDelete(id: number) {
-    if (confirm('Are you sure to delete this record?')) {
+    if (confirm('Deseja excluir este Aeroplano?')) {
       this.service.deleteEmployee(id).subscribe(res => {
         this.service.refreshList();
-        this.toastr.warning('Deleted successfully', 'EMP. Register');
+        this.toastr.warning('Exclusão ok', 'Aeroplanos - Gol');
       });
     }
   }

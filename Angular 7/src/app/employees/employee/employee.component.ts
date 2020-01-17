@@ -25,7 +25,11 @@ export class EmployeeComponent implements OnInit {
       FullName: '',
       Position: '',
       EMPCode: '',
-      Mobile: ''
+      Mobile: '',
+      airplaneId: null,
+      modelo: '',
+      quantidadePassageiros: null,
+      dtCriacao: null
     }
   }
 
